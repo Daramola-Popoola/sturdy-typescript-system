@@ -7,7 +7,7 @@ let arr: string[] = ['traversy media']
 
 //TypeScript Tuples
 /*
-    this allow us to specify the very type of thr values at specific position in an array in typescript
+    this allow us to specify the very type of the values at specific position in an array in typescript
 */
 let arrOfTuple: [number, string, string] = [2, 'Hive', 'Labs']
 //an array pf tuples can also me set 
@@ -61,6 +61,8 @@ const graduand: Discipline = {
     yearOfGraduation: 2022,
     extraYear: false
 }
+
+const tup: [number, string, boolean] = [40, 'brocolli', false]
 
 //typescript type assertion this enables the deeloper to remodify the type of an entity when being calle upon by another entity
 //note: the type assertion of an entity must overlap eachother. To do this the initial value can anly be 'any' or 'unknown'
