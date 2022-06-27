@@ -7,15 +7,23 @@ let anything = 20;
 let arr = ['traversy media'];
 //TypeScript Tuples
 /*
-    this allow us to specify the very type of thr values at specific position in an array in typescript
+    this allow us to specify the very type of the values at specific position in an array in typescript
 */
 let arrOfTuple = [2, 'Hive', 'Labs'];
-//an array pf tuples can also me set 
+//an array pf tuples can also me set
 let nw_array;
 nw_array = [
     [1, 'Lagbaja', true],
     [2, 'Tamedun', false],
     [3, 'John', false]
+];
+const John = [
+    {
+        name: "Omotolani",
+        job: "systems desginer",
+        employed: true,
+        hasOppurtunity: "yes"
+    }
 ];
 /*
 typescript unions allow the developer to specify multiple types to a variable using the boolean oerator OR |
@@ -45,6 +53,7 @@ const graduand = {
     yearOfGraduation: 2022,
     extraYear: false
 };
+const tup = [40, 'brocolli', false];
 //typescript type assertion this enables the deeloper to remodify the type of an entity when being calle upon by another entity
 //note: the type assertion of an entity must overlap eachother. To do this the initial value can anly be 'any' or 'unknown'
 //there are to eays to implement the type assertion
@@ -122,3 +131,20 @@ function createArr(items) {
 }
 const numArray = createArr([1, 2, 3, 4]);
 const strArray = createArr(['this', '2', '3', '.']);
+// interface Build {
+//     info:  string,
+//     timestamp: number,
+//     mimetype: object
+// }
+// let build: Build = {
+//     info: 'ola',
+//     timestamp: Date.now(),
+//     mimetype: {prop: 'mind'}
+// }
+// fetch('http://localhost:3000/', {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(build)
+// })

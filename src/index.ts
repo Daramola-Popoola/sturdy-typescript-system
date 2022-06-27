@@ -10,7 +10,7 @@ let arr: string[] = ['traversy media']
     this allow us to specify the very type of the values at specific position in an array in typescript
 */
 let arrOfTuple: [number, string, string] = [2, 'Hive', 'Labs']
-//an array pf tuples can also me set 
+//an array pf tuples can also me set
 let nw_array: [number, string, boolean][]
 
 nw_array = [
@@ -18,9 +18,25 @@ nw_array = [
     [2, 'Tamedun', false],
     [3, 'John', false]
 ]
+interface Finder{
+  name: string,
+  age?: number,
+  job: string
+  employed: boolean,
+  readonly hasOppurtunity: boolean | string
+}
+
+const John: Finder[] = [
+    {
+    name: "Omotolani",
+    job: "systems desginer",
+    employed: true,
+    hasOppurtunity: "yes"
+}
+];
 
 /*
-typescript unions allow the developer to specify multiple types to a variable using the boolean oerator OR | 
+typescript unions allow the developer to specify multiple types to a variable using the boolean oerator OR |
 */
 
 let in_id: number | string = 'Favourite'
@@ -44,7 +60,7 @@ enum Direction2 {
 }
 
 
-//typescript objects. The specific values needed for each field in the object can be explicitly specified using the type keyword 
+//typescript objects. The specific values needed for each field in the object can be explicitly specified using the type keyword
 
 type Discipline = {
     readonly id: number,
@@ -106,7 +122,7 @@ interface Ile{
     noOfRooms: number,
     isAvailable: boolean,
     address: string,
-    landlord?: string 
+    landlord?: string
 }
 
 let ile1: Ile = {
@@ -135,12 +151,12 @@ const mathOperations: MathFunc = (x: number, y: number) => x + y
 class University{
      position: any
     name: string
-    
+
     constructor(position: number | string, name: string){
         this.position = position
         this.name = name
     }
-    
+
     register(){
         return `${this.name} is at positon number ${this.position}`
     }
@@ -161,13 +177,13 @@ class Faculty implements FacultyInterface{
     noOfDept: number
     nameOfDean: string
     admitting: boolean
-    
+
     constructor(name: string, noOfDept: number, nameOfDean: string, admitting: boolean){
         this.name = name
         this.noOfDept = noOfDept
         this.nameOfDean = nameOfDean
         this.admitting = admitting
-        
+
     }
     register(){
         return `${this.name} will be admitting. ${this.admitting}`
@@ -189,12 +205,12 @@ class Person implements PersonType{
     _id: number
     name: string
     age: number
-    
+
     constructor(_id: number, name: string, age: number){
         this._id = _id
         this.name = name
         this.age = age
-        
+
     }
 }
 
@@ -236,6 +252,6 @@ const strArray = createArr<string>(['this', '2', '3', '.'])
 //     headers: {
 //         'Content-Type': 'application/json'
 //     },
-    
+
 //     body: JSON.stringify(build)
 // })
